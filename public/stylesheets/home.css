@@ -1,3 +1,70 @@
+.navbar-brand {
+    padding: 0.3125rem;
+}
+
+.navbar-dark .navbar-brand {
+    color: black;
+    font-family: fantasy;
+    font-weight: 800;
+    background-color: #ffd900;
+    border-radius: 8px;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: black;
+}
+
+body {
+    background: black;
+}
+
 #coverImage {
     width: 100%;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    border-left: 5px solid #b8c415;
+    padding-left: 10px;
+}
+
+.h-100 {
+    border: none;
+}
+
+.card-body {
+    background: #242323
+}
+
+.card-text {
+    color: rgb(194, 189, 189);
+}
+
+.card-body p {
+    color: white;
+}
+
+.card-title {
+    color: white;
+    font-size: 15px;
+}
+
+.bi-star-fill {
+    color:yellow;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #474c54;
+    border: none;
+}
+
+h5 {
+    height: 80px;
+}
+
+.row>* {
+    margin-bottom: 20px;
 }
