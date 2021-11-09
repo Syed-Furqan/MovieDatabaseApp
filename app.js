@@ -60,6 +60,10 @@ app.get('/particularMovie', (req, res) => {
     });
 });
 
+app.get('/about', (req, res) => {
+    res.send("<h3>Website about Movies, Working on TV Series.\n Get Movie Info and watch online for free.</h3>");
+});
+
 app.listen(process.env.PORT || port, err => {
     if(err) console.log(err);
     else console.log("Server has Stared!!!");
