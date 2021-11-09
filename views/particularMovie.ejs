@@ -23,7 +23,6 @@
                 <h4>Overview</h4>
                 <p><%= movie.overview %></p>
                 <p>Box Office: $<%= movie.revenue %></p>
-                <p style="color: white;"><%= movie.homepage %></p>
                 <% let trailer = movie.homepage %>
                 <% if(trailer == "") { %>
                     <% trailer = "http://youtube.com/"+movie.title; %>
