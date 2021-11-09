@@ -2,6 +2,10 @@
     color: black;
 }
 
+.navbar-dark .navbar-brand:hover {
+    color: black;
+}
+
 .navbar-brand {
     font-family: fantasy;
     padding: 0.3125rem;
@@ -11,10 +15,6 @@
 
 .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link{
     font-weight: bold;
-}
-
-.navbar-brand:hover {
-    color: black;
 }
 
 body {
