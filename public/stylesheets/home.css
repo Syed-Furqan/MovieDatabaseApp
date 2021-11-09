@@ -1,16 +1,19 @@
-.navbar-brand {
-    padding: 0.3125rem;
-}
-
 .navbar-dark .navbar-brand {
     color: black;
+}
+
+.navbar-brand {
     font-family: fantasy;
-    font-weight: 800;
-    background-color: #ffd900;
+    padding: 0.3125rem;
+    background-color: #c29e17;
     border-radius: 8px;
 }
 
-.navbar-dark .navbar-brand:hover {
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link{
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
     color: black;
 }
 
@@ -19,6 +22,7 @@ body {
 }
 
 #coverImage {
+    opacity: 0.5;
     width: 100%;
 }
 

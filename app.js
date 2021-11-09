@@ -9,6 +9,9 @@ const port = 9000;
 
 app.use(express.static('public'));
 
+// Object containing genres and their corresponding id's.
+const obj = {Action: 28, Adventure: 12, Animation: 16, Comedy: 35, Crime: 80, Drama: 18, Horror: 27, Thriller: 53, SciFi: 878, Romance: 10749};
+
 // Getting Popular, Top rated, Upcoming Movies and then sending them to home.ejs and then rendering it.
 app.get('/', (req, res) => {
     request('https://api.themoviedb.org/3/movie/now_playing?api_key=8b5f46448783f704c3aac11d3c1e0695&language=en-US', (err, response, body) => {
@@ -58,10 +61,6 @@ app.get('/particularMovie', (req, res) => {
             }
         });
     });
-});
-
-app.get('/about', (req, res) => {
-    res.send("<h3>Website about Movies, Working on TV Series.\n Get Movie Info and watch online for free.</h3>");
 });
 
 app.listen(process.env.PORT || port, err => {
