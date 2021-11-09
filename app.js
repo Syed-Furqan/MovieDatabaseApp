@@ -33,7 +33,7 @@ app.get('/moviesList', (req, res) => {
     request("https://api.themoviedb.org/3/search/movie?api_key=8b5f46448783f704c3aac11d3c1e0695&language=en-US&page=1&include_adult=false&query="+movieName, (err, response, body) => {
         if(!err && response.statusCode == 200){
             const list = JSON.parse(body);
-            res.render('moviesList.ejs', {moviesList:list});
+            res.render('moviesList.ejs', {moviesList:list, movieName:movieName});
         } else {
             console.log(err);
         }
