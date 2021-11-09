@@ -49,7 +49,7 @@
                                 <p class="card-text"><i class="bi bi-star-fill"></i> <%= nMovie.vote_average %></p>
                                 <h5 class="card-title"><%= nMovie.title %></h5>
                                 <p><%= nMovie.release_date %></p>
-                                <a href="#" class="btn btn-primary">More</a>
+                                <a href=<%= "/particularMovie?id="+nMovie.id %> class="btn btn-primary">More</a>
                                 <% const keyword = nMovie.title.replace(/ /g, '-') %>
                                 <a href=<%= "https://soap2day.rs/search/"+ keyword %> class="btn btn-default"><i class="bi bi-play-btn-fill"> </i>Watch Now</a>
                             </div>
@@ -70,7 +70,7 @@
                                 <p class="card-text"><i class="bi bi-star-fill"></i> <%= pMovie.vote_average %></p>
                                 <h5 class="card-title"><%= pMovie.title %></h5>
                                 <p><%= pMovie.release_date %></p>
-                                <a href="#" class="btn btn-primary">More</a>
+                                <a href=<%= "/particularMovie?id="+pMovie.id %> class="btn btn-primary">More</a>
                                 <% const keyword = pMovie.title.replace(/ /g, '-') %>
                                 <a href=<%= "https://soap2day.rs/search/"+ keyword %> class="btn btn-default"><i class="bi bi-play-btn-fill"> </i>Watch Now</a>
                             </div>
@@ -91,7 +91,7 @@
                                 <p class="card-text"><i class="bi bi-star-fill"></i> <%= tMovie.vote_average %></p>
                                 <h5 class="card-title"><%= tMovie.title %></h5>
                                 <p><%= tMovie.release_date %></p>
-                                <a href="#" class="btn btn-primary">More</a>
+                                <a href=<%= "/particularMovie?id="+tMovie.id %> class="btn btn-primary">More</a>
                                 <% const keyword = tMovie.title.replace(/ /g, '-') %>
                                 <a href=<%= "https://soap2day.rs/search/"+ keyword %> class="btn btn-default"><i class="bi bi-play-btn-fill"> </i>Watch Now</a>
                             </div>

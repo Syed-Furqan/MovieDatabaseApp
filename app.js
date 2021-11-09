@@ -40,6 +40,26 @@ app.get('/moviesList', (req, res) => {
     });
 });
 
+app.get('/particularMovie', (req, res) => {
+    const id = req.query.id;
+    request(`https://api.themoviedb.org/3/movie/${id}?api_key=8b5f46448783f704c3aac11d3c1e0695&language=en-US`, (err, response, body) => {
+        if(err) {
+            res.send("Sorry Page not found!!!");
+            console.log(err);
+        }
+        const movie = JSON.parse(body);
+        request(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=8b5f46448783f704c3aac11d3c1e0695&language=en-US`, (err, response, body) => {
+            if(!err && response.statusCode == 200){
+                const actors = JSON.parse(body);
+                res.render('particularMovie.ejs', {movie:movie, actors:actors});
+            } else{
+                res.send("Sorry Page not found!!!");
+                console.log(err);
+            }
+        });
+    });
+});
+
 app.listen(process.env.PORT || port, err => {
     if(err) console.log(err);
     else console.log("Server has Stared!!!");

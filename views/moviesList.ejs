@@ -19,7 +19,7 @@
                     <p><i class="bi bi-star-fill"></i> <%= movie.vote_average %></p>
                     <p><%= movie.overview %></p>
                     <p><%= movie.release_date %></p>
-                    <a href="#" class="btn btn-success">More</a>
+                    <a href=<%= "/particularMovie?id="+movie.id %> class="btn btn-success">More</a>
                     <% const keyword = movie.title.replace(/ /g, '-') %>
                     <a href=<%= "https://soap2day.rs/search/"+ keyword %> class="btn btn-primary"><i class="bi bi-play-btn-fill"></i> Watch Now</a>
                 </div>
