@@ -10,7 +10,7 @@ const port = 9000;
 app.use(express.static('public'));
 
 // Object containing genres and their corresponding id's.
-const obj = {Action: 28, Adventure: 12, Animation: 16, Comedy: 35, Crime: 80, Drama: 18, Horror: 27, Thriller: 53, SciFi: 878, Romance: 10749};
+const genres = {Action: 28, Adventure: 12, Animation: 16, Comedy: 35, Crime: 80, Drama: 18, Horror: 27, Thriller: 53, SciFi: 878, Romance: 10749};
 
 // Getting Popular, Top rated, Upcoming Movies and then sending them to home.ejs and then rendering it.
 app.get('/', (req, res) => {
@@ -60,6 +60,19 @@ app.get('/particularMovie', (req, res) => {
                 console.log(err);
             }
         });
+    });
+});
+
+app.get('/:genre', (req, res) => {
+    const id = genres[req.params.genre];
+    request(`https://api.themoviedb.org/3/discover/movie?api_key=8b5f46448783f704c3aac11d3c1e0695&with_genres=${id}`, (err, response, body) => {
+        if(!err && response.statusCode == 200){
+            const movies = JSON.parse(body);
+            res.render('genreList.ejs', {movies: movies, genre:req.params.genre});
+        } else {
+            res.send("Sorry Page not found!!!");
+            console.log(err);
+        }
     });
 });
 
