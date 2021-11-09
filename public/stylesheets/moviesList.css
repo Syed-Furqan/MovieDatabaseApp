@@ -1,3 +1,42 @@
 body {
-    background: pink;
+	background: black;
+}
+
+.row {
+	margin: 20px;
+	border: 1px solid black;
+}
+
+.info {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #181818;
+	color: white;
+}
+
+.poster {
+	padding: 0;
+}
+
+.btn-primary {
+	background: #3465ab;
+	border: none;
+}
+
+.btn-success {
+	background: #625b0b;
+	border: none;
+}
+
+h1 {
+	color: #cdcd0e;
+	margin: 20px;
+}
+
+p {
+	color: #a3a3a3;
+}
+
+.bi-star-fill {
+	color: #ffff00e6;
 }
