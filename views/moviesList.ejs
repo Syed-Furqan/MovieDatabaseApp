@@ -17,6 +17,7 @@
                 <div class="col-lg-10 col-md-9 col-sm-12 col-12 info">
                     <h3><%= movie.title %></h3>
                     <p><i class="bi bi-star-fill"></i> <%= movie.vote_average %></p>
+                    <p><%= movie.overview %></p>
                     <p><%= movie.release_date %></p>
                     <a href="#" class="btn btn-success">More</a>
                     <% const keyword = movie.title.replace(/ /g, '-') %>
