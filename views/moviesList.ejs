@@ -6,10 +6,9 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="stylesheets/moviesList.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Showing Results for: <%= movieName %></h1>
+        <h4>Search Results</h4>
         <% moviesList.results.forEach(movie => { %>
             <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-12 col-12 poster">
@@ -19,7 +18,6 @@
                     <h3><%= movie.title %></h3>
                     <p><i class="bi bi-star-fill"></i> <%= movie.vote_average %></p>
                     <p><%= movie.release_date %></p>
-                    <p><%= movie.overview %></p>
                     <a href="#" class="btn btn-success">More</a>
                     <% const keyword = movie.title.replace(/ /g, '-') %>
                     <a href=<%= "https://soap2day.rs/search/"+ keyword %> class="btn btn-primary"><i class="bi bi-play-btn-fill"></i> Watch Now</a>

@@ -4,13 +4,14 @@ body {
 
 .row {
 	margin: 20px;
-	border: 1px solid black;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 8px;
 }
 
 .info {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	background: #181818;
+	background: #1d1d1d;
 	color: white;
 }
 
@@ -28,9 +29,14 @@ body {
 	border: none;
 }
 
-h1 {
-	color: #cdcd0e;
-	margin: 20px;
+h4 {
+	color: white;
+	background: #40400b;
+	padding: 20px;
+}
+
+h3 {
+	color:white;
 }
 
 p {
